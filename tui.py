@@ -102,7 +102,7 @@ class BlogGeneratorTUI(App):
                 ai_model=model
             )
             
-            self.notify("Blog generated successfully!", severity="success")
+            self.notify("Blog generated and saved to 'blogs' directory!", severity="success")
         except Exception as e:
             self.notify(f"Error generating blog: {str(e)}", severity="error")
 

@@ -1,4 +1,7 @@
 import click                                                                                                                                                                                                                              
+import os
+from datetime import datetime
+from pathlib import Path
 from dotenv import load_dotenv
 from trogon import tui
 from scraper import WebScraper
@@ -56,10 +59,23 @@ def create_blog(urls, subreddits, ai_model):
         generator = ClaudeBlogGenerator()                                                                                  
 
     try:                                                                                                                   
-        blog_content = generator.generate(processed_content)                                                               
+        blog_content = generator.generate(processed_content)
+        
+        # Create blogs directory if it doesn't exist
+        blogs_dir = Path("blogs")
+        blogs_dir.mkdir(exist_ok=True)
+        
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"blog_{timestamp}.md"
+        filepath = blogs_dir / filename
+        
+        # Save blog content to file
+        with open(filepath, "w") as f:
+            f.write(blog_content)
+            
         click.echo("Blog generated successfully!")                                                                         
-        click.echo("\nBlog Content:")
-        click.echo(blog_content)
+        click.echo(f"\nBlog saved to: {filepath}")
     except Exception as e:                                                                                                 
         click.echo(f"Error generating blog: {str(e)}")                                                                     
                                                                                                                             
