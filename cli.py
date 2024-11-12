@@ -1,6 +1,7 @@
 import click                                                                                                               
 import os                                                                                                                  
 from dotenv import load_dotenv
+from trogon import tui
 from scraper import WebScraper
 from reddit_parser import RedditParser
 from blog_generator import OpenAIBlogGenerator, ClaudeBlogGenerator
