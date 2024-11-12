@@ -1,4 +1,6 @@
-# AI Blog Generator CLI
+![AI Blog Cli](https://res.cloudinary.com/djaqusrpx/image/upload/v1731410602/Screenshot_from_2024-11-12_12-14-41_h5mzuc.png)
+
+# AI Blog Writer
 
 A powerful command-line tool that creates AI-generated blog posts from various sources including websites and Reddit content. The tool scrapes content, processes images with AI-generated alt text, and uses either OpenAI or Claude to generate well-structured blog posts.
 
