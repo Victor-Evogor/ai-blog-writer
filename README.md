@@ -34,6 +34,8 @@ CLAUDE_API_KEY=your_claude_api_key_here
 
 ## Usage
 
+### Command Line Interface (CLI)
+
 Basic usage with website URLs:
 ```bash
 python cli.py -u https://example.com -u https://example2.com -m openai
@@ -49,7 +51,25 @@ Combining both sources with Claude AI:
 python cli.py -u https://example.com -s programming -m claude
 ```
 
-### Options
+### Text User Interface (TUI)
+
+Launch the interactive TUI:
+```bash
+python tui.py
+```
+
+Or use Trogon to automatically generate a TUI from the CLI:
+```bash
+python cli.py --tui
+```
+
+The TUI provides an interactive interface where you can:
+- Enter a blog title
+- Add multiple URLs and subreddits
+- Select the AI model
+- Generate the blog with a single click
+
+### CLI Options
 
 - `-u, --urls`: Website URLs to scrape (can be used multiple times)
 - `-s, --subreddits`: Subreddit names or post URLs (can be used multiple times)
