@@ -2,7 +2,7 @@
 
 # AI Blog Writer
 
-A powerful command-line tool that creates AI-generated blog posts from various sources including websites and Reddit content. The tool scrapes content, processes images with AI-generated alt text, and uses either OpenAI or Claude to generate well-structured blog posts.
+🤖 A CLI tool that transforms web content into polished blog posts using AI. Scrape websites, pull Reddit discussions, and let OpenAI/Claude craft engaging articles - all from your terminal. Features a sleek TUI interface and smart image handling with AI-generated alt text.
 
 ## Features
 
