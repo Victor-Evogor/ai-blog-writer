@@ -1,5 +1,4 @@
-import click                                                                                                               
-import os                                                                                                                  
+import click                                                                                                                                                                                                                              
 from dotenv import load_dotenv
 from trogon import tui
 from scraper import WebScraper
@@ -55,12 +54,12 @@ def create_blog(urls, subreddits, ai_model):
         generator = OpenAIBlogGenerator()                                                                                  
     else:                                                                                                                  
         generator = ClaudeBlogGenerator()                                                                                  
-                                                                                                                            
+
     try:                                                                                                                   
         blog_content = generator.generate(processed_content)                                                               
         click.echo("Blog generated successfully!")                                                                         
-        click.echo("\nBlog Content:")                                                                                      
-        click.echo(blog_content)                                                                                           
+        click.echo("\nBlog Content:")
+        click.echo(blog_content)
     except Exception as e:                                                                                                 
         click.echo(f"Error generating blog: {str(e)}")                                                                     
                                                                                                                             
