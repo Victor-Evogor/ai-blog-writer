@@ -9,6 +9,7 @@ from image_processor import ImageProcessor
 
 load_dotenv()
 
+@tui()
 @click.command()                                                                                                           
 @click.option('--urls', '-u', multiple=True, help='List of website URLs to scrape')                                        
 @click.option('--subreddits', '-s', multiple=True, help='List of subreddits or Reddit post URLs')                          
