@@ -36,3 +36,5 @@ uc-micro-py==1.0.3
 update-checker==0.18.0
 urllib3==2.2.3
 websocket-client==1.8.0
+fastapi==0.110.0
+uvicorn==0.27.1
