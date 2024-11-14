@@ -36,6 +36,32 @@ CLAUDE_API_KEY=your_claude_api_key_here
 
 ## Usage
 
+### FastAPI Backend
+
+Start the API server:
+```bash
+uvicorn api.main:app --reload
+```
+
+Access the API documentation:
+- Swagger UI: http://127.0.0.1:8000/docs 
+- ReDoc: http://127.0.0.1:8000/redoc
+
+The API provides endpoints for:
+- `POST /generate`: Generate a blog post from URLs and subreddits
+- `GET /`: Get API information
+
+Example API request:
+```bash
+curl -X POST http://127.0.0.1:8000/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "urls": ["https://example.com"],
+    "subreddits": ["technology"],
+    "ai_model": "openai"
+  }'
+```
+
 ### Command Line Interface (CLI)
 
 Basic usage with website URLs:
