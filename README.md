@@ -28,11 +28,11 @@ pip install -r requirements.txt
 
 3. Set up environment variables in `.env`:
 ```
-OPENAI_API_KEY=your_openai_api_key_here
-CLAUDE_API_KEY=your_claude_api_key_here
+OPENAI_API_KEY=
+CLAUDE_API_KEY=
+REDDIT_CLIENT_ID=
+REDDIT_CLIENT_SECRET=
 ```
-
-4. Configure Reddit API credentials in `reddit_parser.py`
 
 ## Usage
 
